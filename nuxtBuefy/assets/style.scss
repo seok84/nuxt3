@@ -1,0 +1,7 @@
+@use 'scss-reset/reset';
+@import '_mixin.scss';
+
+.half {
+    width: 50%;
+    @include ellipsis;
+}
