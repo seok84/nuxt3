@@ -1,0 +1,84 @@
+@use "./module";
+@use './common';
+@use '~/assets/scss/pages/components/modal';
+@use '~/assets/scss/pages/items/item_list';
+
+
+.guide {
+    &-page {
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 14px;
+
+        h1 {
+            display: block;
+            text-align: center;
+            font-size: 64px;
+            font-weight: bold;
+            padding: 0 0 40px;
+        }
+
+        h2 {
+            position: relative;
+            display: block;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 24px 0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 1px;
+                background-color: module.$fontLight;
+            }
+        }
+
+    }
+
+    &-subtabs {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-bottom: 20px;
+
+        > button {
+            line-height: 48px;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: module.$fontLight;
+            font-weight: 400;
+
+            &.active {
+                color: module.$brandPrimary;
+                font-weight: 700;
+                border-bottom: 1px solid module.$brandPrimary;
+            }
+        }
+    }
+
+    &-code {
+        display: block;
+        margin: 20px 0 40px;
+        padding: 20px 0;
+        background-color: module.$bgLight;
+        border-radius: 20px;
+        box-sizing: border-box;
+        pre {
+            line-height: 1.25;
+            font-size: 12px;
+            font-weight: 300;
+            color: module.$fontGreyDark;
+        }
+    }
+
+    &-desc {
+        display: block;
+        margin: 20px 0 2px;
+        
+        &:first-child {
+            margin-top: 0 0 2px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "orderSequence":"123456789",
+        "orderCode":"ORD20240212A",
+        "createdDate":"2024-02-12 14:30:00",
+        "sellerName": "카카오",
+        "itemQuantity": "999",
+        "itemGroup": [
+            {
+                "isSoldOut": true,
+                "itemUserCode": "123456789",
+                "itemImage": "/_nuxt/assets/image/sample/thum_area.png"
+            },
+            {
+                "isSoldOut": true,
+                "itemUserCode": "123456789",
+                "itemImage": "/_nuxt/assets/image/sample/thum_area.png"
+            }
+        ]
+    }
+    
+]

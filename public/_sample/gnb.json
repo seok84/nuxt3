@@ -1,0 +1,123 @@
+[
+    { 
+        "menu": "가구/수납", "link:": "/guide",
+        "subGnbItems": [
+            {"submenu": "2차 카테고리1", "link:": "/"},
+            {"submenu": "노트/메모", "link:": "/"},
+            {
+                "submenu": "플래너/컨셉북", "link:": "/",
+                "thirdCategorys": [
+                    {
+                        "thirdMenu": "3차 카테고리", "link:": "/",
+                        "fourthCategorys": [
+                            {"fourthMenu": "4차 카테고리", "link:": "/"},
+                            {"fourthMenu": "캐쉬북", "link:": "/"},
+                            {"fourthMenu": "티켓북", "link:": "/"},
+                            {"fourthMenu": "테마북", "link:": "/"},
+                            {"fourthMenu": "다이어트 플래너", "link:": "/"},
+                            {"fourthMenu": "트래블노트", "link:": "/"},
+                            {"fourthMenu": "단어장/오답노트", "link:": "/"},
+                            {"fourthMenu": "스티커북", "link:": "/"}
+                        ]
+                    },
+                    {"thirdMenu": "캐쉬북", "link:": "/"},
+                    {"thirdMenu": "티켓북", "link:": "/"},
+                    {"thirdMenu": "테마북", "link:": "/"},
+                    {"thirdMenu": "다이어트 플래너", "link:": "/"},
+                    {"thirdMenu": "트래블노트", "link:": "/"},
+                    {"thirdMenu": "단어장/오답노트", "link:": "/"},
+                    {"thirdMenu": "스티커북", "link:": "/"}
+                ]
+            },
+            {"submenu": "데코/포장", "link:": "/"},
+            {"submenu": "필기구", "link:": "/"},
+            {"submenu": "필통/펜파우치", "link:": "/"},
+            {"submenu": "데스크용품", "link:": "/"},
+            {"submenu": "앨범/사진", "link:": "/"},
+            {"submenu": "독서용품", "link:": "/"},
+            {"submenu": "사무용품", "link:": "/"},
+            {"submenu": "파일/바인더", "link:": "/"},
+            {"submenu": "명함/사원증", "link:": "/"},
+            {"submenu": "카드/편지", "link:": "/"},
+            {"submenu": "미술용품", "link:": "/"},
+            {"submenu": "캐쉬용품", "link:": "/"}
+             
+        ]
+    },
+    { 
+        "menu": "가전/생활", "link:": "/", 
+        "subGnbItems": [
+            {"submenu": "2차 카테고리2", "link:": "/"},
+            {"submenu": "menu2", "link:": "/"},
+            {"submenu": "menu3", "link:": "/"}
+        ]
+    },
+    { 
+        "menu": "디자인문구", "link:": "/", 
+        "subGnbItems": [
+            {"submenu": "2차 카테고리3", "link:": "/"},
+            {
+                "submenu": "menu2", "link:": "/"
+
+            },
+            {"submenu": "menu3", "link:": "/"}
+        ]
+    },
+    { 
+        "menu": "디지털", "link:": "/", 
+        "subGnbItems": [
+            {"submenu": "2차 카테고리4", "link:": "/"},
+            {"submenu": "menu2", "link:": "/"},
+            {"submenu": "menu3", "link:": "/"}
+        ]
+    },
+    { 
+        "menu": "뷰티/헬스", "link:": "/", 
+        "subGnbItems": [
+            {"submenu": "2차 카테고리5", "link:": "/"},
+            {"submenu": "menu2", "link:": "/"},
+            {"submenu": "menu3", "link:": "/"}
+        ]
+    },
+    { 
+        "menu": "여행/레포츠", "link:": "/", 
+        "subGnbItems": [
+            {"submenu": "2차 카테고리6", "link:": "/"},
+            {"submenu": "menu2", "link:": "/"},
+            {"submenu": "menu3", "link:": "/"}
+        ]
+    },
+    { 
+        "menu": "유아동", "link:": "/", 
+        "subGnbItems": [
+            {"submenu": "2차 카테고리7", "link:": "/"},
+            {"submenu": "menu2", "link:": "/"},
+            {"submenu": "menu3", "link:": "/"}
+        ]
+    },
+    { 
+        "menu": "인테리어", "link:": "/", 
+        "subGnbItems": [
+            {"submenu": "2차 카테고리8", "link:": "/"},
+            {"submenu": "menu2", "link:": "/"},
+            {"submenu": "menu3", "link:": "/"}
+        ]
+    },
+    { 
+        "menu": "주방/푸드", "link:": "/", 
+        "subGnbItems": [
+            {"submenu": "2차 카테고리9", "link:": "/"},
+            {"submenu": "menu2", "link:": "/"},
+            {"submenu": "menu3", "link:": "/"}
+        ]
+    },
+    { 
+        "menu": "펫샵", "link:": "/", 
+        "subGnbItems": [
+            {"submenu": "2차 카테고리10", "link:": "/"},
+            {"submenu": "menu2", "link:": "/"},
+            {"submenu": "menu3", "link:": "/"}
+        ]
+    }
+
+]

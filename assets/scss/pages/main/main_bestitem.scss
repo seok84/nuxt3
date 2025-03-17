@@ -1,0 +1,174 @@
+@use "~/assets/scss/module";
+
+.main-bestitem-area {
+    position: module.$rel;
+    margin-bottom: 5rem;
+
+    .swiper-slide {
+        font-size: 1.4rem;
+        color: module.$fontMedium;
+        text-align: center;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 8.6rem;
+            height: 8.6rem;
+            margin: 0 auto .8rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 4.8rem;
+            border-radius: module.$full;
+        }
+
+        &.category-all:before {
+            @extend %flexCenter, %flexVCenter;
+            content: 'ALL';
+            font-family: module.$numberFont;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        &.on,
+        &.swiper-slide-active {
+            font-weight: bold;
+            color: module.$fontBlackDark;
+        }
+
+        &.category-all,
+        &.category-all.on {
+            color: module.$brandPrimary;
+
+            &:before {
+                color: module.$brandPrimary;
+                border: .1rem solid module.$brandPrimary;
+            }
+        }
+    }
+
+    .category {
+        &1:before {
+            background-image: url('~/assets/image/ico/category/ico_category01.svg');
+        }
+
+        &2:before {
+            background-image: url('~/assets/image/ico/category/ico_category02.svg');
+        }
+
+        &3:before {
+            background-image: url('~/assets/image/ico/category/ico_category03.svg');
+        }
+
+        &4:before {
+            background-image: url('~/assets/image/ico/category/ico_category04.svg');
+        }
+
+        &5:before {
+            background-image: url('~/assets/image/ico/category/ico_category05.svg');
+        }
+
+        &6:before {
+            background-image: url('~/assets/image/ico/category/ico_category06.svg');
+        }
+
+        &7:before {
+            background-image: url('~/assets/image/ico/category/ico_category07.svg');
+        }
+
+        &8:before {
+            background-image: url('~/assets/image/ico/category/ico_category08.svg');
+        }
+
+        &9:before {
+            background-image: url('~/assets/image/ico/category/ico_category09.svg');
+        }
+
+        &10:before {
+            background-image: url('~/assets/image/ico/category/ico_category10.svg');
+        }
+
+        &11:before {
+            background-image: url('~/assets/image/ico/category/ico_category11.svg');
+        }
+
+        &12:before {
+            background-image: url('~/assets/image/ico/category/ico_category12.svg');
+        }
+
+        &13:before {
+            background-image: url('~/assets/image/ico/category/ico_category13.svg');
+        }
+
+        &14:before {
+            background-image: url('~/assets/image/ico/category/ico_category14.svg');
+        }
+    }
+
+    .swiper-controls {
+        top: 3.2rem;
+        max-width: 124.2rem;
+    }
+
+    .item-list-container {
+        display: module.$flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .col-left,
+        .col-right {
+            width: calc(module.$half - 1.5rem);
+        }
+
+        .col-right {
+            @extend %flexBetween;
+            flex-wrap: wrap;
+
+            .item-list {
+                width: calc(module.$half - 1.5rem);
+                margin: 0 0 3rem;
+            }
+        }
+    }
+
+    .thumbnail-container {
+        max-width: 100%;
+    }
+}
+
+
+@include module.mobile {
+    .main-bestitem-area {
+        .swiper-wrap {
+            padding: 0 1.6rem;
+            margin-bottom: 3rem;
+        }
+
+        .swiper-slide:before {
+            width: 6.4rem;
+            height: 6.4rem;
+        }
+
+        .swiper-controls {
+            display: none;
+        }
+
+        .item-list-container {
+            flex-wrap: wrap;
+
+            .col-left,
+            .col-right {
+                width: module.$full;
+            }
+
+            .col-left {
+                margin-bottom: 3rem;
+            }
+
+            .col-right .item-list {
+                width: calc(module.$half - .7rem);
+            }
+        }
+    }
+    
+}

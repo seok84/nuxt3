@@ -1,0 +1,226 @@
+@use "~/assets/scss/module";
+
+.main-visual {
+    margin: 0 auto 4rem;
+    position: module.$rel;
+    overflow: hidden;
+
+    &.swiper {
+        max-width: inherit;
+        width: module.$full;
+        max-height: 60rem;
+    }
+
+    .swiper-slide {
+        position: module.$rel;
+        text-align: center;
+
+        a, img {
+            max-width: module.$width;
+            margin: auto;
+        }
+    }
+
+    img {
+        width: module.$full;
+        max-width: 192rem;
+        height: auto;
+        margin: auto;
+    }
+
+    .main-swiper-pagination-wrap {
+        @extend %flexCenter, %flexVCenter;
+        position: module.$offset;
+        right: module.$half;
+        bottom: 2rem;
+        transform: translateX(module.$half);
+        margin-right: calc(-59.7rem + 5.5rem);
+        width: 11rem;
+        z-index: 1;
+
+        >span {
+            opacity: .6;
+        }
+
+        .btn-pause,
+        .btn-play,
+        .main-swiper-pagination {
+            display: module.$inlineFlex;
+            justify-content: center;
+            align-items: center;
+            height: 3rem;
+            font-size: 1.4rem;
+            color: module.$colorWhite;
+            @include module.backgroundOpacity(module.$colorBlack, $opacity: .3);
+        }
+
+        .btn-play,
+        .btn-pause {
+            width: 3rem;
+            border-radius: module.$full;
+            margin: 0 .6rem 0 0;
+            padding: 0;
+            position: module.$rel;
+            font-size: 0;
+
+            &::before,
+            &::after {
+                content: '';
+                display: module.$inlineBlock;
+                width: .2rem;
+                height: 0.9rem;
+                background: module.$colorWhite;
+            }
+
+            &::after {
+                margin-left: .2rem;
+            }
+        }
+
+        .btn-play {
+            @extend %flexCenter, %flexVCenter;
+            font-size: 0;
+
+            &:before {
+                display: none;
+            }
+
+            &::after {
+                content: '';
+                font-size: 1.4rem;
+                width: auto;
+                height: auto;
+                background: none;
+                border-width: .7rem 0 .7rem .8rem;
+                border-style: solid;
+                border-color: transparent transparent transparent module.$colorWhite;
+            }
+        }
+
+        .main-swiper-pagination {
+            width: 7rem;
+            border-radius: 3rem;
+            padding: 0 1rem;
+            font-family: module.$numberFont;
+        }
+
+        .swiper-pagination-current {
+            font-weight: 500;
+            opacity: 1;
+        }
+    }
+
+    &.type-carosel {
+        padding: 4rem 0 5rem;
+
+        .swiper-slide {
+            width: 78.6rem;
+            position: relative;
+            img {
+                max-width: 78.6rem;
+                width: module.$full;
+                height: auto;
+            }
+        }
+        
+        .swiper-controls {
+            top: inherit;
+            bottom: 2.9rem;
+            transform: none;
+            width: 10rem;
+            margin-left: -5.2rem;
+
+            .swiper-prev, .swiper-next {
+                @include module.round(.4rem);
+                width: 2.8rem;
+                height: 2.8rem;
+                background: #f1f2f7;
+            }
+            
+        }
+
+        .main-swiper-pagination-wrap {
+            bottom: 0;
+            margin-right: 0;
+            
+            .btn-pause,
+            .btn-play,
+            .main-swiper-pagination {
+                color: module.$colorBlack;
+                background: none;
+            }
+
+            .btn-pause {
+                @include module.round(.4rem);
+                background: #f1f2f7;
+                position: module.$offset;
+                right: -3.2rem;
+                width: 2.8rem;
+                height: 2.8rem;
+
+                &:before,
+                &:after {
+                    background: module.$colorBlack;
+                }
+            }
+        }
+        
+    }
+}
+
+@include module.laptop {
+    .main-visual {
+        margin: 0 0 3rem;
+
+        .swiper-controls {
+            display: none;
+        }
+
+        .main-swiper-pagination-wrap {
+            position: module.$offset;
+            right: 1.6rem;
+            bottom: 1.6rem;
+            margin-right: 0;
+            transform: none;
+        }
+        &.type-carosel {
+            padding: 0;
+            .swiper-controls {
+                display: none;
+            }
+            .main-swiper-pagination-wrap {
+                justify-content: flex-end;
+                bottom: 1.6rem;
+
+                .btn-pause {
+                    right: 8.2rem;
+                    margin: 0;
+                    border-radius: module.$full;
+                    background: rgba(0, 0, 0, .3);
+
+                    &::before,
+                    &::after {
+                        background: module.$colorWhite;
+                    }
+                }
+
+                .main-swiper-pagination {
+                    background: rgba(0, 0, 0, .3);
+                    color: module.$colorWhite;
+
+                }
+            }
+
+        }
+    }
+}
+
+@include module.mobile {
+    .main-visual {
+        margin: 0 0 3rem;
+
+        .swiper-controls {
+            display: none;
+        }
+    }
+}

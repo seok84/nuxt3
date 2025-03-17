@@ -1,0 +1,211 @@
+@use "~/assets/scss/module";
+@use '~/assets/scss/common';
+@use './mypage_main';
+
+.mypage-grade {
+    .grade {
+        &-info {
+            position: relative;
+            display: module.$block;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            background-color: module.$bgLight;
+            text-align: center;
+            @include module.round(.5rem);
+
+            .info {
+                @extend %flexCenter02;
+                line-height: 1;
+                span {
+                    flex:none;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    color: module.$fontDark;
+                }
+
+                strong {
+                    display: module.$inlineBlock;
+                    margin: 0 .4rem;
+                    color: module.$colorBlack;
+                    font-family: module.$numberFont;
+                    font-size: 2.6rem;
+                    font-weight: bold;
+                    letter-spacing: -0.14rem;
+                }
+            }
+
+            .benefits {
+                color: module.$fontGrey;
+                font-size: 1.4rem;
+                line-height: 1.57;
+            }
+        }
+
+        &-ico {
+            .ico {
+                display: module.$inlineBlock;
+                width: 4rem;
+            }
+        }
+
+        /* pc */
+        &-content {
+            width: 100%;
+            margin: 2rem 0 4rem;
+
+            .bg {
+                background-color: module.$bgLight;
+            }
+
+            .grade {
+                line-height: 4.4rem;
+                @extend %flexCenter02;
+                font-size: 1.6rem;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                >strong {
+                    margin-left: .2rem;
+                }
+            }
+
+            .desc {
+                font-size: 1.4rem;
+                color: module.$fontDark;
+                letter-spacing: -0.04rem;
+                text-align: center;
+                font-family: module.$numberFont, module.$notoSans;
+                vertical-align: middle;
+
+                .bold {
+                    font-weight: 500;
+                }
+
+                th,
+                td{
+                    padding: 1rem;
+                }
+            }
+        }
+
+        /* mobile */
+        &-list {
+            display: none;
+            &,
+            & dl {
+                @extend %flexVCenter;
+                text-align: center;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            dl + dl{
+                margin-top: 3.8rem;
+            }
+
+            dt,
+            dd {
+                display: module.$block;
+                width: 100%;
+            }
+            dd{
+                padding: 1rem;
+            }
+        }
+    }
+
+    .coupon-list {
+        display: module.$inlineFlex;
+        justify-content: center;
+        padding-top: 1.4rem;
+        margin: 1.4rem auto 0;
+        border-top: .1rem solid module.$lineLight;
+        max-width: 48rem;
+        width: 100%;
+
+        li {
+            flex: 1;
+            @extend %flexVCenter;
+            flex-direction: column;
+
+            .item {
+                width: 8.4rem;
+                height: 4.6rem;
+                padding: 0;
+                margin-bottom: 1rem;
+
+                div {
+                    border-radius: .5rem;
+
+                    &.price-area {
+                        em {
+                            display: module.$inlineBlock;
+                            font-size: 2rem;
+                            font-weight: bold;
+                            line-height: 1;
+                            padding-top: .4rem;
+                        }
+                    }
+                }
+            }
+
+            .desc {
+                font-size: 1.4rem;
+                line-height: 1.5;
+                color: module.$fontGrey;
+            }
+
+            .condition {
+                font-size: 1.2rem;
+                color: module.$fontGreyDark;
+                line-height: 1.8;
+            }
+        }
+    }
+
+    .tooltip-handler.liner{
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: 0;
+        background-color: transparent;
+        border: .1rem solid module.$lineDark;
+        color: module.$fontDark;
+        font-size: 1.2rem;
+    }
+}
+
+@include module.mobile{
+    .mypage-grade{
+        
+        .grade {
+            /* pc */
+            &-content {
+                display: none;
+            }
+    
+            /* mobile */
+            &-list {
+                display: flex;
+            }
+        }
+        .coupon-list{
+            align-items: flex-start;
+            flex-wrap: wrap;
+            li{
+                flex:none;
+                width: 50%;
+                &:nth-child(2n){
+                    margin: 0 0 2rem;
+                }
+            }
+        }
+    }
+}
+
+@include module.noMobile{
+    .mypage-grade{
+        .tooltip-wrap .tooltip-content{
+            top: unset;
+        }
+    }
+}

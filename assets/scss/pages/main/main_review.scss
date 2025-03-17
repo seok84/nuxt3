@@ -1,0 +1,75 @@
+@use "~/assets/scss/module";
+
+.main-review-area {
+    margin-bottom: 8rem;
+
+    .swiper-slide {
+        display: module.$flex;
+        width: calc(50% - 30px);
+    }
+
+    .thum {
+        width: 27.6rem;
+        height: 27.6rem;
+    }
+
+    .review {
+        width: calc(module.$full - 27.6rem);
+        background-image: url('~/assets/image/ico/ico_review_quotes.svg');
+        background-repeat: no-repeat;
+        background-size: 2.8rem auto;
+        background-position: 3rem 2rem;
+        padding: 5.6rem 3rem 0;
+
+        p {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: module.$fontBlackDark;
+            margin: 0 0 .8rem;
+
+            &.text-ellipsis {
+                color: module.$fontMedium;
+            }
+        }
+    }
+
+    .star-wrap {
+        margin-bottom: 3.6rem;
+    }
+}
+
+@media (max-width: 1242px) {
+    .main-review-area {
+        .thum {
+            max-width: 27.6rem;
+            max-height: 27.6rem;
+        }
+    }
+
+}
+
+@include module.laptop {
+    .main-review-area {
+        .swiper-slide {
+            flex-wrap: wrap;
+
+            .thum,
+            .review {
+                width: module.$full;
+            }
+
+            .thum {
+                padding: 0 1.6rem;
+                width: module.$full;
+                height: auto;
+                max-width: fit-content;
+                max-height: fit-content;
+            }
+        }
+    }
+
+}
+
+@include module.mobile {
+    
+}

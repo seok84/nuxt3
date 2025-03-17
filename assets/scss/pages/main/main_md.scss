@@ -1,0 +1,80 @@
+@use "~/assets/scss/module";
+
+.main-tabs {
+    @extend %flexVCenter;
+    justify-content: center;
+    margin-bottom: 3rem;
+    overflow: hidden;
+
+    .swiper-wrap {
+        width: module.$full;
+        max-width: 100.6rem;
+        margin: auto;
+    }
+
+    .swiper-slide {
+        display: module.$inlineBlock;
+        width: auto;
+        cursor: pointer;
+
+        &.on {
+           .main-tabitem {            
+                color: module.$colorWhite;
+                background-color: module.$brandPrimary;
+                border-color: module.$brandPrimary;
+           }
+        }
+    }
+
+    .main-tabitem {
+        display: module.$inlineFlex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 2rem;
+        margin: 0;
+        height: 4.8rem;
+        border-radius: 4.8rem;
+        font-size: 1.6rem;
+        color: module.$fontMedium;
+        border: .1rem solid module.$lineLight;
+
+        &.active {
+            color: module.$colorWhite;
+            background-color: module.$brandPrimary;
+            border-color: module.$brandPrimary;
+        }
+    }
+}
+
+.main-tabcontent {
+    margin-bottom: 6rem;
+
+    /* 아이텐 요소가 20px 가지고  있음 */
+    .thumbnail-container .thumbnail-wrap {
+        max-width: 21.6rem;
+        max-height: 21.8rem;
+    }
+}
+
+@media (max-width: 1242px) {
+    .main-tabcontent {
+        .thumbnail-container .thumbnail-wrap {
+            max-width: 21.6rem;
+            max-height: 21.8rem;
+        }
+    }
+}
+
+@include module.mobile {
+    .main-tabs {
+        .swiper-slide {
+            &:first-child {
+                margin-left: 1.6rem;
+            }
+        }
+    }
+    
+    .main-tabcontent {
+        margin-bottom: 6rem;
+    }
+}

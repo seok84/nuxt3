@@ -1,0 +1,50 @@
+[
+    {
+        "couponId": 1,
+        "couponName": "10% 할인 쿠폰",
+        "couponComment": "모든 상품 대상 할인",
+        "couponPay": 10,
+        "couponPayType": "2",
+        "couponPayRestriction": 50000,
+        "couponApplyStartDate": "2024-02-01",
+        "couponApplyEndDate": "2024-02-29",
+        "couponTargetItemCount": 5,
+        "couponUseDate": ""
+    },
+    {
+        "couponId": 2,
+        "couponName": "5,000원 할인 쿠폰",
+        "couponComment": "10만 원 이상 구매 시 사용 가능",
+        "couponPay": 5000,
+        "couponPayType": "1",
+        "couponPayRestriction": 100000,
+        "couponApplyStartDate": "2024-02-10",
+        "couponApplyEndDate": "2024-03-10",
+        "couponTargetItemCount": 2,
+        "couponUseDate": ""
+    },
+    {
+        "couponId": 3,
+        "couponName": "무료 배송 쿠폰",
+        "couponComment": "5만 원 이상 주문 시 적용",
+        "couponPay": 100,
+        "couponPayType": "2",
+        "couponPayRestriction": 50000,
+        "couponApplyStartDate": "2024-01-15",
+        "couponApplyEndDate": "2024-02-15",
+        "couponTargetItemCount": 0,
+        "couponUseDate": "2024-02-05"
+    },
+    {
+        "couponId": 4,
+        "couponName": "15% 할인 쿠폰",
+        "couponComment": "특정 상품 전용 할인",
+        "couponPay": 15,
+        "couponPayType": "2",
+        "couponPayRestriction": 70000,
+        "couponApplyStartDate": "2024-03-01",
+        "couponApplyEndDate": "2024-03-31",
+        "couponTargetItemCount": 10,
+        "couponUseDate": ""
+    }
+]

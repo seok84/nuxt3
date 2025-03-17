@@ -1,0 +1,116 @@
+@use "~/assets/scss/module";
+
+.main-ad-banner-area {
+    margin-bottom: 8rem;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .flex {
+        justify-content: space-between;
+    }
+
+    .txt-banner {
+        flex: 1;
+        max-width: calc(50% - 1.5rem);
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 0 4.6rem 0 3rem;
+        background-image: url("~/assets/image/ico/ico_link.svg");
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: 3.6rem auto;
+        overflow: hidden;
+
+        img {
+            max-width: 16rem;
+            height: auto;
+            margin-right: 3rem;
+        }
+    }
+
+    .banner-title {
+        flex: none;
+        display: flex;
+        flex-direction: column;
+
+        .category {
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: module.$fontBlackDark;
+            line-height: 1.5;
+        }
+
+        .title {
+            font-size: 2.4rem;
+            font-weight: bold;
+            line-height: 1.5;
+            @include module.ellipsis(1);
+            color: module.$fontBlackDark;
+        }
+
+        .desc {
+            display: module.$inlineBlock;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            font-family: module.$numberFont;
+            color: module.$fontLight;
+        }
+    }
+}
+
+@include module.mobile {
+    .main-ad-banner-area {
+        padding: 0 1.6rem;
+
+        .flex {
+            flex-wrap: wrap;
+
+            .img-banner {
+                display: block;
+                margin-bottom: 2rem;
+
+                &.pc {
+                    display: none;
+                }
+            }
+        }
+
+        .txt-banner {
+            flex: none;
+            max-width: 100%;
+            padding: 0 3.6rem 0 1.6rem;
+            margin-top: 2rem;
+
+            img {
+                max-width: 12.6rem;
+                height: auto;
+                margin-right: 2rem;
+            }
+        }
+
+        .banner-title {
+            flex: 1;
+
+            .category {
+                font-size: 1.4rem;
+            }
+
+            .title {
+                line-height: 1.33;
+                font-size: 1.8rem;
+                white-space: wrap;
+                @include module.ellipsis(2);
+            }
+
+            .desc {
+                display: none;
+            }
+        }
+    }
+}

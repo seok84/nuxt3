@@ -1,0 +1,152 @@
+@use "variables";
+
+/* placeholders */
+%img {
+    width: variables.$full; 
+    vertical-align: top;
+}
+
+%textLeft {
+    text-align: left;
+}
+
+%textCenter {
+    text-align: center;
+}
+
+%textRright {
+    text-align: right;
+}
+
+%floatLeft {
+    float: left;
+}
+
+%floatRight {
+    float: right;
+}
+
+%offsetLeft {
+    position: variables.$offset; 
+    top: 0; 
+    left: 0;
+}
+
+%offsetRight {
+    position: variables.$offset; 
+    top: 0; 
+    right: 0;
+}
+
+%offsetBottomLeft {
+    position: variables.$offset;
+    bottom: 0;
+    left: 0;
+}
+
+%offsetBottomRright {
+    position: variables.$offset; 
+    bottom: 0; 
+    right: 0;
+}
+
+%offsetCenter {
+    position: variables.$offset; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+%flexBetween {
+    display: variables.$flex;
+    justify-content: space-between;
+}
+
+%flexBetweenCenter {
+    display: variables.$flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%flexAround {
+    display: variables.$flex;
+    justify-content: space-around;
+}
+
+%flexCenter {
+    display: variables.$flex;
+    justify-content: center;
+}
+
+%flexCenter02 {
+    display: variables.$flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flexVCenter {
+    display: variables.$flex;
+    align-items: center;
+}
+
+%fixedLeft {
+    position: variables.$fixed;
+    top: 0; 
+    left: 0;
+}
+
+%fixedRight {
+    position: variables.$fixed;
+    top: 0; 
+    right: 0;
+}
+
+%fixedBottomLeft {
+    position: variables.$fixed;
+    bottom: 0;
+    left: 0;
+}
+
+%fixedBottomRright {
+    position: variables.$fixed; 
+    bottom: 0; 
+    right: 0;
+}
+
+%fixedeCenter {
+    position: variables.$fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+%after {
+    &:after 
+    {
+        content: ''; 
+        clear: both; 
+        display: variables.$block;
+    }
+}
+
+%textHidden {
+    font-size: 0; 
+    text-indent: -9999px;
+}
+
+%ico {
+    display: variables.$block;
+    background-repeat: no-repeat; 
+    background-size: contain;
+}
+
+%icoWhite {
+    background-image: url('../img/ico/ico_white.png'); 
+    background-repeat: no-repeat;
+}
+
+%arrBlack{
+    background-image: url('~/assets/image/ico/ico_toggle_arrow_down.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}

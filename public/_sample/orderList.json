@@ -1,0 +1,20 @@
+[
+    {
+        "itemUserCode": "SAMPLE000001",
+        "sellerName": "업체명",
+        "itemQuantity": "999",
+        "shippings": [{
+            "singleShipping": [{
+                "buyItem": [{
+                    "itemUserCode": "usercode00000",
+                    "itemDetailResponse": [{
+                        "itemImage": "/_nuxt/assets/image/common/no_content.png"
+                    }],
+                    "freeGiftItemText": "사은품이 노출되고 있습니다 N1개"
+                }],
+                "disabled": false,
+                "shippingIndex": 0
+            }]
+        }]
+    }
+]

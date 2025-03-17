@@ -1,0 +1,38 @@
+[
+    {
+        "tagType":"product",
+        "couponId":123,
+        "couponPay":10,
+        "couponPayType":0,
+        "couponApplyType":"0",
+        "couponName":"[패밀리] 10%할인(최대 5천원)",
+        "couponComment":"상품 쿠폰이 노출되고 있습니다.",
+        "couponApplyStartDate":"2019-01-01",
+        "couponApplyEndDate":"2019-06-03",
+        "couponPayRestriction":50000
+    },
+    {
+        "tagType":"order",
+        "couponId":456,
+        "couponPay":3000,
+        "couponPayType":1,
+        "couponApplyType":"1",
+        "couponName":"[패밀리] 10%할인(최대 5천원)",
+        "couponComment":"상품 쿠폰이 노출되고 있습니다.",
+        "startDate":"2019-01-01",
+        "endDate":"2019-06-03",
+        "couponPayRestriction":50000
+    },
+    {
+        "tagType":"category",
+        "couponId":789,
+        "couponPay":15,
+        "couponPayType":0,
+        "couponApplyType":"1",
+        "couponName":"[패밀리] 10%할인(최대 5천원)",
+        "couponComment":"상품 쿠폰이 노출되고 있습니다.",
+        "startDate":"2019-01-01",
+        "endDate":"2019-06-03",
+        "couponPayRestriction":50000
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "fixedStatus": false,
+        "noticeTittle": "공지사항 제목입니다 고정된 공지사항 제목입니다 고정된 공지사항 제목입니다",
+        "noticeRegistDate": "2025-02-01",
+        "externalLink": "https://www.naver.com",
+        "noticeContent": "이것은 샘플 콘텐츠"
+    },
+    {
+        "fixedStatus": true,
+        "noticeTittle": "고정된 공지사항 제목입니다 ",
+        "noticeRegistDate": "2025-02-01",
+        "externalLink": "https://www.naver.com",
+        "noticeContent": "이것은 고정된 샘플 콘텐츠"
+    },
+    {
+        "fixedStatus": false,
+        "noticeTittle": "공지사항 제목입니다",
+        "noticeRegistDate": "2025-02-01",
+        "externalLink": "https://www.naver.com",
+        "noticeContent": "이것은 샘플 콘텐츠 ~~~~~~~~~~~~~~~~~~~"
+    },
+    {
+        "fixedStatus": false,
+        "noticeTittle": "공지사항 제목입니다",
+        "noticeRegistDate": "2025-02-01",
+        "externalLink": "https://www.naver.com",
+        "noticeContent": "이것은 샘플 콘텐츠"
+    }
+]

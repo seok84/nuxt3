@@ -1,0 +1,278 @@
+@use "~/assets/scss/module";
+
+.main-title-wrap {
+    margin: 0 0 3rem;
+    text-align: center;
+
+    .main-title {
+        @extend %flexCenter, %flexVCenter;
+        font-family: module.$pointFont;
+        font-size: 4.6rem;
+        font-weight: bold;
+        letter-spacing: -.161rem;
+        line-height: 1;
+        color: #000;
+        margin: 0 0 1.8rem;
+
+        &:after {
+            @extend %ico;
+            content: '';
+            display: module.$inlineBlock;
+            width: 4.8rem;
+            height: 4.8rem;
+            background-image: url('~/assets/image/ico/btn_more.svg');
+        }
+    }
+
+    h2.main-title::after {
+        display: none;
+    }
+
+    p {
+        line-height: 1.44;
+        font-size: 1.8rem;
+        letter-spacing: -0.161rem;
+        color: module.$brandPrimary;
+    }
+}
+
+.main-timesale-bg {
+    @include module.backgroundOpacity(module.$brandPrimary, $opacity: .15);
+    width: module.$full;
+    //background-color: #f0e7fa;
+    background-repeat: no-repeat;
+    background-size: 78.2rem 58.2rem;
+    background-position: calc(module.$half - 31rem) 18.8rem;
+    position: module.$rel;
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        width: 58.2rem;
+        height: 58.2rem;
+        border-radius: module.$full;
+        position: module.$offset;
+        top: 19rem;
+        border: 1px dashed #c7b3de;
+    }
+
+    &:before {
+        left: module.$half;
+        transform: translateX(-68rem);
+    }
+
+    &:after {
+        right: module.$half;
+        transform: translateX(7.2rem);
+    }
+
+    .swiper-controls {
+        max-width: 124.2rem;
+        top: calc(50% + 3.6rem);
+    }
+}
+
+.main-timesale-area {
+    padding: 6rem 0 0;
+    margin: 0 0 4rem;
+    position: module.$rel;
+
+    .swiper-wrap {
+        margin-bottom: 0;
+        padding-bottom: 2rem;
+    }
+
+    .swiper {
+        padding-bottom: 2.2rem;
+    }
+
+    .swiper-slide {
+        display: module.$flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .thum {
+        display: block;
+        width: 58.2rem;
+        height: 58.2rem;
+        border-radius: module.$full;
+        position: module.$rel;
+        overflow: hidden;
+
+        img {
+            @extend %offsetCenter;
+            width: module.$full;
+            height: module.$full;
+            border-radius: module.$full;
+        }
+    }
+
+    .info-container {
+        width: calc(51.26% - 16rem);
+        margin: 0 0 0 16rem;
+        padding: 0 11.4rem 0 0;
+        box-sizing: border-box;
+
+        .title-main {
+            font-size: 2.4rem;
+            font-weight: 500;
+            line-height: 2.5rem;
+            margin: 0 0 1rem;
+        }
+
+        .discounted {
+            font-size: 1.2rem;
+
+            span {
+                font-size: 1.4rem;
+            }
+        }
+
+        .flex {
+
+            .price-wrap,
+            .user-action {
+                width: module.$half;
+            }
+
+            .user-action {
+                margin-bottom: 0;
+            }
+        }
+
+        .user-attention {
+            background-image: url('~/assets/image/ico/btn_ico_heart.svg');
+            background-size: 100% auto;
+        }
+
+        .user-basket {
+            background-image: url('~/assets/image/ico/btn_ico_bag.svg');
+            background-size: 100% auto;
+        }
+    }
+
+    .time-area {
+        font-family: module.$numberFont;
+        font-size: 3rem;
+        font-weight: 600;
+        color: module.$brandPrimary;
+        margin: 0 0 .7rem;
+
+        .day {
+            margin: 0 1.4rem 0 0;
+        }
+    }
+
+    .timesale-swiper-pagination {
+        text-align: center;
+
+        .swiper-horizontal > .swiper-pagination-bullet {
+            @include module.backgroundOpacity(module.$colorBlack, $opacity: .1);
+
+            &-active {
+                background-color: module.$brandPrimary;
+            }
+        }
+    }
+}
+
+@media (max-width: 1242px) {
+    .main-timesale-area {
+        .swiper-wrap {
+            padding: 0 4.8rem;
+        }
+    }
+    .main-timesale-bg {
+
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}
+
+@include module.laptop {
+    .main-timesale-area {
+        padding-top: 3rem;
+        position: module.$rel;
+
+        .swiper-wrap {
+            padding: 0 1.6rem 6rem;
+        }
+
+        .swiper-slide {
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .thum,
+        .info-container {
+            width: module.$full;
+        }
+
+        .thum {
+            max-width: 58.2rem;
+            max-height: 58.2rem;
+            width: module.$full;
+            height: calc(100vw - 4rem);
+            margin: 0 auto 2rem;
+            padding: 0 1.6rem;
+        }
+
+        .swiper-controls {
+            width: module.$full;
+            max-width: none;
+            top: module.$half;
+            margin-top: -10rem;
+
+            .swiper-prev {
+                left: 1rem;
+            }
+
+            .swiper-next {
+                right: 1rem;
+            }
+        }
+
+        .timesale-swiper-pagination {
+            display: none;
+        }
+
+        .info-container {
+            margin-left: 0;
+            padding: 5rem 1.6rem 0;
+
+            .title-main {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+            }
+
+            .price-wrap {
+                width: module.$full;
+            }
+        }
+
+        .time-area {
+            display: none;
+        }
+    }
+}
+
+@include module.mobile {
+    .main-timesale-area {
+        .thum {
+            max-width: 30rem;
+            max-height: 30rem;
+            width: module.$full;
+            height: calc(100vw - 12rem);
+            margin: 0 auto 2rem;
+            padding: 0 1.6rem;
+        }
+        .info-container {
+            padding: 2rem 1.6rem 0;
+        }
+    }
+
+}

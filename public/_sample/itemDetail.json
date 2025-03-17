@@ -1,0 +1,47 @@
+[
+    {
+        "spotFlag": 1,
+        "spotDateType": 1,
+        "displaySpotStartTime": "09:38",
+        "displaySpotEndTime": "11:59",
+        "spotWeekDays": "월 · 화 · 수 · 목 · 금 · 토 · 일",
+        "salePrice": 138000,
+        "presentPrice": 108000,
+        "discountRate": 25,
+        "userLevelDiscountRate": 2,
+        "userLevelDiscountAmount": 9999999999,
+        "itemPrice": 9999999999,
+        "setDiscountPrice": 9999999999,
+        "sellerDiscountPrice": 9999999999,
+        "isSetItem": false,
+        "setDiscountAmount": 0,
+        "spotDiscountAmount": 9000000000,
+        "userLevelName": "sliver",
+        "itemUserCode": 123456,
+        "shippingType": 1, 
+        "shipping": 3000,
+        "shippingFreeAmount": 30000,
+        "shippingItemCount": 10,
+        "freeGiftFlag": "Y",
+        "freeGiftItemList": "",
+        "freeGiftName": "사은품",
+        
+        "labels": [
+            {"tag": "new", "name": "신상품", "color": ""},
+            {"tag": "md", "name": "MD추천", "color": ""},
+            {"tag": "coupon", "name": "쿠폰", "color": ""},
+            {"tag": "delivery", "name": "무료배송", "color": ""},
+            {"tag": "best", "name": "베스트", "color": ""},
+            {"tag": "only", "name": "ONLY", "color": ""},
+            {"tag": "salegoods", "name": "행사상품", "color": ""},
+            {"tag": "timesale", "name": "타임세일", "color": ""},
+            {"tag": "event", "name": "이벤트", "color": ""}
+        ],
+        "brand": "뷰티비기닝",
+        "brandId": "G2000000000",
+        "displayItemName": "[슈스스 추천템] 소녀의세계 x 뷰티비기닝 무선 미니 고데기",
+        "originCountry": "원산지 : 상세설명 참조",
+        "itemSummary": "슈퍼 스타 스타일리스트 언니의 추천템! 선 없는 자유로움과 상큼한 디자인으로 진정한 무선 스타일링을 즐겨보세요~"
+    }
+
+]

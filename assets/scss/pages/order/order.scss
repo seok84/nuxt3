@@ -1,0 +1,825 @@
+@use "~/assets/scss/module";
+@use "~/assets/scss/pages/items/item_list";
+@use "~/assets/scss/pages/cart/cart";
+@use "~/assets/scss/pages/cart/cart-modal";
+
+// ####### 주문서(주문/결제) 페이지
+.order-page {
+    .contents-area {
+        &.active {
+            .contents-right {
+                .floating-aside {
+                    width: 26.4rem;
+                    position: module.$fixed;
+                    top: 14.6rem;
+                }
+            }
+
+            &.offset {
+                .contents-right {
+                    .floating-aside {
+                        width: 26.4rem;
+                        position: module.$offset;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .toggle-title {
+        border-top: 1px solid module.$colorBlack;
+        margin-top: 4rem;
+        cursor: pointer;
+
+        .toggle-arr {
+            z-index: -1;
+        }
+    }
+
+    .toggle-title:first-child {
+        margin-top: 0;
+    }
+
+    .floating-aside {
+        .floating-contents {
+            padding: 3rem 0rem 0rem;
+
+            .title {
+                padding: 0 2rem 0;
+                margin-bottom: 3rem;
+            }
+
+            .content {
+                &.expected-info-wrap {
+                    padding: 0 2rem 0;
+                    margin: 0;
+
+                    .expected-info {
+                        &.sub {
+                            p:first-child {
+                                padding-left: 1.6rem;
+                            }
+                        }
+
+                        &.primary {
+                            &.last {
+                                margin-top: 0;
+                                margin-bottom: 1rem;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .agree-terms {
+            padding-top: 2rem;
+            padding: 2rem;
+
+            .circle-input-checkbox {
+                color: module.$fontDark;
+                span {
+                    flex: 1;
+                }
+            }
+        }
+
+        .btn-floating {
+            height: 5.5rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    .product-list-container .product-list {
+        .item-list-container.horizon .item-list {
+            justify-content: flex-start;
+        }
+        .item-gift {
+            margin-left: 0;
+        }
+    }
+}
+
+.info-delivery {
+    max-width: 56rem;
+    margin-bottom: 4rem;
+
+    .form-line {
+        margin-bottom: .8rem;
+
+        .feedback {
+            margin-bottom: .2rem;
+        }
+    }
+}
+
+.info-point {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .point-status {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        p:first-child {
+            font-size: 1.6rem;
+            color: module.$fontGreyDark;
+        }
+
+        p:last-child {
+            font-size: 1.8rem;
+            font-weight: bold;
+            
+            margin-left: 1rem;
+        }
+    }
+
+    .use-point-wrap {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+
+
+        .check-wrap {
+            margin-bottom: 0;
+        }
+
+        .use-point {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1rem;
+
+            .input-point input {
+                width: calc(34.8rem - 15rem);
+                height: 5rem;
+                border: 1px solid module.$lineGrey;
+                border-right: 0;
+                border-radius: 2.5rem;
+                padding-right: 2rem;
+                text-align: right;
+                font-size: 1.6rem;
+                font-weight: bold;
+                
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .btn-point {
+                width: 15rem;
+                height: 5rem;
+                border: 1px solid module.$lineGrey;
+                background-color: module.$bgLight;
+                border-radius: 0 2.5rem 2.5rem 0;
+                font-size: 1.4rem;
+            }
+        }
+
+
+
+    }
+}
+
+.info-payment-method {
+    p {
+        font-size: 1.4rem;
+    }
+
+    .payment-wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        .payment {
+            width: calc((100% - 4rem) / 5);
+            height: 10rem;
+            border: 1px solid module.$lineGrey;
+            border-radius: .5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            padding: 1.4rem;
+            margin-right: 1rem;
+            margin-top: 2rem;
+            cursor: pointer;
+            box-sizing: border-box;
+
+            &.active {
+                border: .5rem solid module.$brandPrimary;
+
+                &.easy {
+                    border: 1px solid module.$lineGrey;
+                }
+            }
+
+            &:nth-child(5n) {
+                margin-right: 0;
+            }
+
+            &.default {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 4rem;
+                    height: 4rem;
+                }
+
+                span {
+                    width: 100%;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    text-align: center;
+                    margin-top: .6rem;
+                }
+            }
+
+
+            &.easy {
+                padding: 2rem;
+                box-sizing: border-box;
+
+                img {
+                    width: 100%;
+                    height: 50%;
+                }
+
+                &.naver {
+                    background-color: #00DE5A;
+                }
+
+                &.kakao {
+                    background-color: #FFEB00
+                }
+
+                &.toss {
+                    background-color: module.$colorWhite;
+                }
+
+                &.kb {
+                    background-color: #FECD08
+                }
+
+                &.hana {
+                    background-color: #009090
+                }
+            }
+
+
+        }
+    }
+
+    .payment-form-wrap {
+        padding-top: 2rem;
+
+        .payment-form {
+            margin-top: 4rem;
+            background-color: module.$bgLight;
+            padding: 3rem;
+
+            .radio-wrap {
+                margin-top: -1rem;
+
+                .input-radio {
+                    margin: 1rem 4rem 0 0;
+
+                    &:nth-last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+.total-expected {
+    margin-top: 4rem;
+    display: module.$block;
+    margin-bottom: 12rem;
+}
+
+.expected-info-wrap {
+    display: module.$flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    background-color: module.$bgLight;
+    padding: 2rem 2.85rem;
+    margin-top: 1rem;
+
+    .expected-info {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 1.5rem;
+        font-size: 1.4rem;
+        color: module.$fontDark;
+        line-height: 1.5;
+
+        &::before {
+            content: '';
+            position: module.$offset;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            color: module.$fontDark;
+            background-image: url("~/assets/image/cart/ico_dep.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        &.primary {
+            line-height: 2;
+            color: module.$fontBlackShade;
+            border-top: 1px dashed module.$lineLight;
+            padding-left: 0;
+            margin-left: 0;
+            margin-top: 1rem;
+            padding-top: 1rem;
+
+            &::before {
+                display: none;
+            }
+
+            p:first-child {
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+
+            p:last-child {
+                font-size: 1.6rem;
+                font-weight: bold;
+
+                b {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        &.first {
+            border: none;
+            margin-top: -1.5rem;
+        }
+
+        &.last {
+            line-height: 1.5;
+
+            p:first-child {
+                color: module.$fontBlackShade;
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+
+            p:last-child {
+                font-size: 2.4rem;
+                font-weight: bold;
+                color: module.$brandPrimary;
+
+                b {
+                    font-size: 1.4rem
+                }
+            }
+        }
+
+        b {
+            margin-left: .2rem;
+        }
+
+
+    }
+}
+
+
+// ####### 주문완료 페이지
+.order-completed-page {
+    .content-title {
+        margin: 3rem 0 1rem;
+    }
+
+    .info-freebank.content-table {
+        margin: 3rem 0 0;
+        background-color: module.$bgSecondaryLight;
+        @include module.round(2rem);
+
+        th,
+        td {
+
+            font-size: 1.6rem;
+            color: module.$colorBlack;
+            font-weight: 500;
+        }
+
+    }
+
+    .btn-wrap {
+        max-width: 43.2rem;
+        width: 100%;
+        margin: 3rem auto 0;
+        font-size: 1.6rem;
+    }
+}
+
+
+// ####### 비회원 약관 동의 페이지
+.order-non-member-page {
+    .induce-login {
+        padding: 3rem 2.4rem;
+        background-color: module.$bgSecondaryLight;
+        @include module.round(1rem);
+
+        p {
+            font-size: 1.4rem;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .btn-wrap {
+            margin-top: 4rem;
+
+            .btn {
+                height: 6rem;
+                font-size: 1.6rem;
+                font-weight: 500;
+                max-width: 19rem;
+                width: 100%;
+            }
+        }
+    }
+
+    .terms-content {
+        width: 100%;
+        max-width: 38.6rem;
+        margin: 4rem auto;
+    }
+
+    .btn-order {
+        display: module.$block;
+        max-width: 29.4rem;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 1.6rem;
+    }
+}
+
+.info-order {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+        display: module.$block;
+        width: 10rem;
+    }
+
+    span {
+        font-size: 2.8rem;
+        margin-top: 3rem;
+    }
+
+    .order-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        font-size: 2rem;
+        margin-top: 2rem;
+        font-weight: 500;
+
+        p:last-child {
+            font-weight: bold;
+            margin-left: 1rem;
+            text-decoration: underline;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+
+            &::after {
+                content: "";
+                display: module.$inlineBlock;
+                position: relative;
+                width: 3.6rem;
+                height: 3.6rem;
+                background-image: url("~/assets/image/ico/ico_down_black.svg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                transform: rotate(-90deg);
+                z-index: 1;
+            }
+        }
+    }
+
+    .order-date {
+        
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+}
+
+.info-payment-detail {
+    width: 100%;
+    border-radius: .5rem;
+    background-color: module.$bgLight;
+    padding: 2rem 3rem;
+
+    li {
+        display: module.$flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 1.4rem;
+        padding: 1.5rem 0;
+        border-top: 1px dashed module.$lineLight;
+
+        &:first-child {
+            border-top: 0;
+            padding-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+
+        .method {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            span:nth-child(1) {
+                font-size: 1.4rem;
+                color: module.$colorBlack;
+            }
+
+            span:nth-child(2) {
+                font-size: 1.3rem;
+                color: module.$colorWhite;
+                padding: .4rem;
+                background-color: module.$bgDakrLight;
+                margin: 0 .7rem;
+                border-radius: .3rem;
+            }
+
+            span:nth-child(3) {
+                font-size: 1.2rem;
+                color: module.$pointBlue;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        .amount {
+            display: module.$flex;
+            justify-content: flex-end;
+            flex-direction: column;
+
+            span {
+                display: module.$block;
+                font-size: 1.6rem;
+                font-weight: bold;
+                text-align: right;
+
+                b {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                }
+            }
+
+        }
+
+        .date {
+            width: 100%;
+            text-align: right;
+            font-size: 1.4rem;
+            color: module.$fontGrey;
+            text-align: right;
+            padding: .5rem 0 0;
+
+            b {
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+@include module.mobile {
+    // ####### 주문서(주문/결제) 페이지
+    .order-page {
+        .toggle-title {
+            padding-left: 1.6rem;
+            padding-right: 1.6rem;
+            margin-top: 3rem;
+        }
+
+        .toggle-title:first-child {
+            margin-top: 0;
+            border-top: 0;
+        }
+
+        .toggle-title.toggle-order-list {
+            margin-top: 0;
+        }
+
+        &.contents-area-page {
+            padding: 0;
+
+            .toggle-content {
+                margin-left: 1.6rem;
+                margin-right: 1.6rem;
+            }
+        }
+
+        .agree-terms {
+            &.mobile {
+                display: block;
+                padding-left: 1.6rem;
+                padding-right: 1.6rem;
+                margin-bottom: 10rem;
+
+                .toggle-content {
+                    padding-left: 1.6rem;
+                }
+            }
+
+            .circle-input-checkbox {
+                color: module.$fontDark;
+                span {
+                    flex: 1;
+                }
+            }
+        }
+
+        .brand-container {
+            margin-top: 0;
+        }
+    }
+
+    .toggle-content.info-delivery {
+        margin-bottom: 3rem;
+    }
+
+    .info-point {
+        flex-wrap: wrap;
+
+        .use-point-wrap {
+            width: 100%;
+            position: relative;
+
+            .check-wrap {
+                position: module.$offset;
+                right: 0;
+                bottom: calc(100% - .3rem);
+            }
+
+            .use-point {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 1.4rem;
+
+                .input-point {
+                    width: 100%;
+                }
+
+                .input-point input {
+                    width: 100%;
+                }
+
+            }
+
+        }
+    }
+
+    .info-payment-method {
+        p {
+            font-size: 1.4rem;
+        }
+
+        .payment-wrap {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            .payment {
+                width: calc((100% - .8rem) / 2);
+                padding: 1rem;
+                margin-right: .8rem;
+                margin-top: 1rem;
+
+                &:nth-child(5n) {
+                    margin-right: auto;
+                }
+
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+        }
+        .payment-form-wrap .payment-form {
+            padding: 3rem 1.6rem;
+        }
+
+        .dot-list {
+            margin-top: 2rem;
+        }
+    }
+
+    .total-expected {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+        margin-bottom: 2rem;
+
+        &::before {
+            content: '';
+            display: module.$block;
+            width: 100vw;
+            height: .6rem;
+            background-color: module.$bgLight;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 3rem 0;
+        }
+
+    }
+
+    .expected-info-wrap {
+
+        .expected-info {
+
+            &.last {
+                display: none;
+            }
+        }
+    }
+
+    // ####### 주문완료 페이지
+    .order-completed-page {
+
+        .info-freebank {
+            margin: 2rem 0 0;
+        }
+    }
+
+    .info-order {
+        span {
+            font-size: 1.8rem;
+        }
+    }
+
+    .info-payment-detail {
+        padding: 2rem 1.6rem;
+
+        li {
+            position: relative;
+
+            .method {
+                width: 75%;
+            }
+
+            .amount {
+                width: 25%;
+            }
+
+        }
+    }
+
+    // ####### 비회원 약관 동의 페이지
+    .order-non-member-page {
+        .induce-login {
+            padding: 3rem 1.3rem;
+
+            .btn-wrap {
+                margin-top: 2rem;
+
+                .btn {
+                    height: 3.6rem;
+                }
+            }
+        }
+
+        .terms-content {
+            margin: 3rem auto;
+        }
+    }
+
+}

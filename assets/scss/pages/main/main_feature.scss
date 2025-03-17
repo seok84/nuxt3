@@ -1,0 +1,169 @@
+@use "~/assets/scss/module";
+
+.event-list {
+    display: module.$flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    .event-item {
+        flex: none;
+        width: calc((100% - 3rem)/2);
+        height: module.$full;
+        margin-right: 3rem;
+        margin-bottom: 2rem;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        &.event-information {
+            border: .1rem solid module.$lineGrey;
+            .event-thumbnail {
+                border-radius: 0;
+            }
+        }
+    }
+
+    .event-thumbnail {
+        position: relative;
+        height: 24rem;
+        border-bottom-right-radius: 10rem;
+        overflow: hidden;
+
+        .label {
+            position: absolute;
+            display: module.$inlineBlock;
+            min-width: 6rem;
+            line-height: 3rem;
+            padding: 0 1rem;
+            box-sizing: border-box;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-align: center;
+
+            &.progress {
+                background-color: module.$brandMedium;
+                color: module.$colorWhite;
+            }
+
+            &.closed {
+                background-color: module.$fontBlackDark;
+                color: module.$colorWhite;
+            }
+        }
+
+        .dimmed {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            @include module.backgroundOpacity(module.$colorBlack, $opacity: .3);
+            background-image: url("~/assets/image/sample/event-closed.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 80%;
+        }
+
+        >img {
+            width: module.$full;
+            height: module.$full;
+            object-fit: cover;
+        }
+    }
+
+    .event-info {
+        height: 14.5rem;
+        padding: 1.2rem 1.6rem;
+        box-sizing: border-box;
+
+        .title {
+            display: block;
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-bottom: .8rem;
+            color: module.$fontBlackDark;
+            @include module.ellipsis(2);
+        }
+
+        .sub,
+        .date {
+            display: block;
+            line-height: 1.8;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: module.$fontLight;
+            @include module.ellipsis(1);
+        }
+    }
+
+    .event-wrap {
+        .pagination {
+            margin: 3rem auto;
+        }
+    }
+
+    .event-category-title {
+        position: relative;
+        display: block;
+        padding: 2.6rem 0 0;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 500;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: .6rem;
+            background-repeat: repeat-x;
+            background-position: left center;
+            background-size: auto 100%;
+            background-image: url("~/assets/image/common/slash-line.png");
+        }
+    }
+}
+
+@include module.mobile {
+    .event-list-wrap {
+        padding: 0 1.6rem;
+
+        .event-item {
+            width: module.$full;
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+
+        .event-thumbnail {
+            height: 13.4rem;
+            border-bottom-right-radius: 5rem;
+        }
+
+        .event-info {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            height: 7.8rem;
+            padding: .8rem 1.4rem;
+
+            .title {
+                font-size: 1.6rem;
+                margin-bottom: .4rem;
+                -webkit-line-clamp: 1;
+            }
+
+            .sub {
+                display: none;
+            }
+
+            .date {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+}

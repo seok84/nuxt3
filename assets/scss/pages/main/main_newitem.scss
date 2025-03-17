@@ -1,0 +1,131 @@
+@use "~/assets/scss/module";
+
+.main-new-item-list {
+    margin-bottom: 5rem;
+
+    ul {
+        @extend %flexBetweenCenter;
+        flex-wrap: wrap;
+
+        li {
+            width: 37.8rem;
+            max-width: 37.8rem;
+            height: 37.8rem;
+            height: auto;
+            margin: 0 0 3rem;
+            position: module.$rel;
+
+            &:hover,
+            &.on {
+                .hover {
+                    @extend %flexCenter, %flexVCenter, %offsetLeft;
+                }
+            }
+        }
+    }
+
+    .thumb {
+        img {
+            width: module.$full;
+            max-width: 37.8rem;
+            height: auto;
+        }
+    }
+
+    .hover {
+        @include module.backgroundOpacity(module.$brandPrimary, $opacity: .7);
+        flex-wrap: wrap;
+        width: module.$full;
+        height: module.$full;
+        text-align: left;
+        display: none;
+
+        .info {
+            width: module.$full;
+            padding: 0 5rem;
+        }
+    }
+
+    .goods-title {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: module.$colorWhite;
+        margin: 0 0 1rem;
+    }
+
+    .discounted,
+    .price,
+    .sale {
+        font-family: module.$numberFont;
+    }
+
+    .discounted {
+        font-size: 1.4rem;
+        text-decoration: line-through;
+        color: module.$fontLight;
+    }
+
+    .price-wrap {
+        @extend %flexVCenter;
+        font-size: 1.4rem;
+        line-height: 1;
+        color: module.$colorWhite;
+    }
+
+    .price span {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: module.$colorWhite  !important;
+    }
+
+    .sale {
+        color: module.$pointRequired;
+    }
+}
+
+@media (max-width: 1242px) {
+    .main-new-item-list {
+        margin-bottom: 5rem;
+
+        ul li {
+            width: calc(33.33% - 1.5rem);
+            max-width: 37.8rem;
+            max-height: 37.8rem;
+        }
+    }
+
+}
+
+@include module.laptop {
+    .main-new-item-list {
+        .hover {
+            .info {
+                padding: 0 2rem;
+            }
+        }
+    }
+
+}
+
+@include module.mobile {
+    .main-new-item-list {
+        margin-bottom: 4rem;
+
+        ul {
+            padding-right: 1.6rem;
+            padding-left: 1.6rem;
+
+            li {
+                width: calc(module.$half - .7rem);
+                margin-bottom: 2rem;
+                &:hover,
+                &.on {
+                    .hover {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+        
+    }
+}

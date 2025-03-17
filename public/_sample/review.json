@@ -1,0 +1,46 @@
+[
+    {
+        "id":1,
+        "itemName":"프리미엄 블루투스 스피커",
+        "itemUserCode":"SPK12345",
+        "itemImage":"/thumb/04.png",
+        "answerFlag":false,
+        "date":"2024-02-10",
+        "score":4,
+        "subject":"배송이 빨라요",
+        "reviewDesc":"하루만에 도착했어요",
+        "answer":null
+    },
+    {
+        "id":2,
+        "itemName":"게이밍 키보드 RGB",
+        "itemUserCode":"KEY56789",
+        "itemImage":"/thumb/05.png",
+        "answerFlag":true,
+        "date":"2024-02-08",
+        "score":2,
+        "subject":"",
+        "reviewDesc":"별루네요",
+        "answer":{
+            "title":"",
+            "answer":"실망시켜드려 죄송합니다",
+            "date":"2024-02-09"
+        }
+    },
+    {
+        "id":3,
+        "itemName":"무선 충전 마우스 패드",
+        "itemUserCode":"MOUSEPAD987",
+        "itemImage":"/thumb/03.png",
+        "answerFlag":true,
+        "date":"2024-02-05",
+        "score":5,
+        "subject":"",
+        "reviewDesc":"정말 좋아요~",
+        "answer":{
+            "title":"",
+            "answer":"리뷰 감사합니다 ^^",
+            "date":"2024-02-06"
+        }
+    }
+]

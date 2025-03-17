@@ -1,0 +1,109 @@
+@use "~/assets/scss/module";
+
+.main-title-wrap {
+    margin: 0 0 3rem;
+    text-align: center;
+
+    .main-title {
+        @extend %flexCenter, %flexVCenter;
+        font-family: module.$pointFont;
+        font-size: 4.6rem;
+        font-weight: bold;
+        letter-spacing: -.161rem;
+        line-height: 1;
+        color: #000;
+        margin: 0 0 1.8rem;
+
+        &:after {
+            @extend %ico;
+            content: '';
+            display: module.$inlineBlock;
+            width: 4.8rem;
+            height: 4.8rem;
+            background-image: url('~/assets/image/ico/btn_more.svg');
+        }
+    }
+
+    h2.main-title::after {
+        display: none;
+    }
+
+    p {
+        line-height: 1.44;
+        font-size: 1.8rem;
+        letter-spacing: -0.161rem;
+        color: module.$brandPrimary;
+    }
+}
+
+.focus-brand-area {
+    &:before {
+        content: '';
+        display: block;
+        position: module.$offset;
+        top: 0;
+        left: 0;
+        display: block;
+        width: module.$full;
+        height: 70%;
+        background-color: module.$bgPrimaryLight;
+        background-image: url('~/assets/image/main/favorite_bg.svg');
+        background-repeat: repeat-x;
+        background-position: 0 0;
+        background-size: 100% 32rem;
+        z-index: -1;
+    }
+
+    padding: 6rem 0 0;
+    margin-bottom: 8rem;
+    position: module.$rel;
+
+    .swiper-slide {
+        @extend %flexVCenter;
+        min-height: 28.4rem;
+        flex-wrap: wrap;
+
+        .text {
+            display: none;
+        }
+
+        &.on {
+            .text {
+                display: flex;
+            }
+        }
+    }
+
+    .thum {
+        width: 19.2rem;
+        height: 19.6rem;
+    }
+
+    .text {
+        @extend %flexCenter, %flexVCenter;
+        width: module.$full;
+        height: 6.4rem;
+        font-size: 1.8rem;
+        color: module.$brandPrimary;
+        border-bottom: .1rem solid module.$brandPrimary;
+    }
+}
+
+
+@media (max-width: 1242px) {
+    .focus-brand-area {
+        .thum {
+            max-width: 19.2rem;
+            max-height: 19.6rem;
+        }
+
+    }
+
+}
+
+@include module.mobile {
+    .focus-brand-area {
+        padding-right: 1.6rem;
+        padding-left: 1.6rem;
+    }
+}

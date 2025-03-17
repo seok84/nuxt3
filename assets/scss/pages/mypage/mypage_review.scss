@@ -1,0 +1,150 @@
+@use "~/assets/scss/module";
+@use '~/assets/scss/common';
+@use './mypage_main';
+/* 문의, 리뷰 공통 */
+
+.review-content{
+    >li{
+        @include  module.round(.5rem);
+        border: .1rem solid module.$lineGrey;
+        padding: 2rem;
+
+        & + li {
+            margin-top: 2rem;
+        }
+
+        .item-list-container.horizon{
+            .item-list{
+                margin-bottom: 0;
+            }
+            .thumbnail-container{
+                flex:none;
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+
+        >.divider{
+            display: module.$block;
+            border-bottom: .2rem dotted module.$lineGrey;
+            margin: 1.6rem 0;
+        }
+
+        .delivery-status-wrap,
+        .eval{
+            @extend %flexVCenter;
+            justify-content: space-between;
+            line-height: 1;
+            margin-bottom: 1.4rem;
+
+            .status{
+                margin: 0;
+                font-size: 1.4rem;
+            }
+            .util{
+                @extend %flexVCenter;
+                .date{
+                    font-size: 1.2rem;
+                    color: module.$fontGrey;
+                }
+                .divider{
+                    display: module.$inlineBlock;
+                    width: 1px;
+                    height: 1rem;
+                    background-color: module.$bgDark;
+                    margin: 0 1rem;
+                }
+                .delete-inquiry{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        .user-writing{
+            color: module.$fontBlackDark;
+            .title{
+                display: block;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 1.2;
+                strong{
+                    margin-right: .4rem;
+                    color: module.$fontMedium;
+                }
+
+                .category {
+                    display: inline-block;
+                    color: module.$fontLight;
+                    margin-right: .6rem;
+                }
+
+                .question{
+                    &::before{
+                        content:'Q.';
+                        position: relative;
+                        display: inline-block;
+                        margin-right: .2rem;
+                        font:inherit;
+
+                    }
+                }
+            }
+            .content{
+                line-height: 1.5;
+                margin-top: .6rem;
+                font-size: 1.2rem;
+                letter-spacing: -0.04rem;
+            }
+        }
+        .admin-answer{
+            margin-top: 1rem;
+            background-color: module.$bgLight;
+            padding: 2rem;
+            @include  module.round(1rem);
+
+
+            .content{
+                color: module.$fontDark;
+                font-size: 1.2rem;
+                line-height: 1.6;
+            }
+            >.date{
+                font-size: 1.2rem;
+                line-height: 1.3;
+                margin-top: 1rem;
+                color: module.$fontDark;
+            }
+        }
+
+    }
+}
+
+@include  module.mobile{
+    .review-content{
+
+        >li{
+            >.divider{
+                margin: 1.4rem 0 ;
+            }
+        }
+        .item-list-container.horizon{
+            padding: 0;
+        }
+        .info-container{
+            .title-main{
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .mypage{
+        &-review,
+        &-inquiry{
+
+            >.select-wrap{
+                .btn{
+                    max-width:9rem;
+                }
+            }
+        }
+    }
+}

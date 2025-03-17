@@ -1,0 +1,115 @@
+[
+    {
+        "orderSequence":"123456789",
+        "orderCode":"ORD20240212A",
+        "createdDate":"2024-02-12 14:30:00",
+        "items":[
+            {
+                "orderStatusLabel":"입금대기",
+                "orderStatus":"10",
+                "itemSequence":"123456789",
+                "deliveryCompanyUrl":"",
+                "itemId":"A1001",
+                "brand":"카카오",
+                "sellerName":"카카오",
+                "itemName":"Wireless Earbuds",
+                "options": "다시 돌아온 바닷가왠지 그녀도 왔을까여기 저기 둘러 보아도부서지는 파도소리만",
+                "quantity":1,
+                "itemAmount":59000,
+                "isSoldOut": true,
+                "soldOutImage": "https://png.pngtree.com/png-clipart/20241101/original/pngtree-sold-out-sticker-template-png-image_16577542.png",
+                "floatingImages": {
+                    "topLeft": "",
+                    "topRight": "",
+                    "bottomLeft": "",
+                    "bottomRight": "",
+                    "centerCenter": ""
+                },
+                "thumbnail": "/thumb/01.png"
+            },
+            {
+                "orderStatusLabel":"배달 중",
+                "orderStatus":"35",
+                "itemSequence":"",
+                "deliveryCompanyUrl":"",
+                "itemId":"A1002",
+                "brand":"카카오",
+                "sellerName":"카카오",
+                "itemName":"USB-C Charger",
+                "options": "뚱보 아이스크림 아저씨혹시 그녈 보셨나요쭉쭉빵빵 날씬한 다리 그녈 찾아주세요",
+                "quantity":2,
+                "itemAmount":29000,
+                "isSoldOut": true,
+                "soldOutImage": "https://png.pngtree.com/png-clipart/20241101/original/pngtree-sold-out-sticker-template-png-image_16577542.png",
+                "floatingImages": {
+                    "topLeft": "",
+                    "topRight": "",
+                    "bottomLeft": "",
+                    "bottomRight": "",
+                    "centerCenter": ""
+                },
+                "thumbnail": "/thumb/01.png"
+            }
+        ]
+    },
+    {
+        "orderSequence":"987654321",
+        "orderCode":"ORD20240210B",
+        "createdDate":"2024-02-10 09:15:00",
+        "items":[
+            {
+                "orderStatusLabel":"취소완료",
+                "orderStatus":"65",
+                "itemSequence":"987654321",
+                "deliveryCompanyUrl":"",
+                "itemId":"B2001",
+                "brand":"카카오",
+                "sellerName":"카카오",
+                "itemName":"Gaming Mouse",
+                "options": "새까만 선글라스에하늘색 물들인 머리널 따라 내 머리도 노랑 브릿지",
+                "quantity":1,
+                "itemAmount":75000,
+                "isSoldOut": true,
+                "soldOutImage": "https://png.pngtree.com/png-clipart/20241101/original/pngtree-sold-out-sticker-template-png-image_16577542.png",
+                "floatingImages": {
+                    "topLeft": "",
+                    "topRight": "",
+                    "bottomLeft": "",
+                    "bottomRight": "",
+                    "centerCenter": ""
+                },
+                "thumbnail": "/thumb/01.png"
+            }
+        ]
+    },
+    {
+        "orderSequence":"456789123",
+        "orderCode":"ORD20240208C",
+        "createdDate":"2024-02-08 08:45:00",
+        "items":[
+            {
+                "orderStatusLabel":"배달완료",
+                "orderStatus":"40",
+                "itemSequence":"456789123",
+                "deliveryCompanyUrl":"",
+                "itemId":"C3001",
+                "brand":"카카오",
+                "sellerName":"카카오",
+                "itemName":"Mechanical Keyboard",
+                "options": "이름도 성도 몰라요용기로 훔친 첫 키스수줍었던 그녀 얼굴 떠오르네요",
+                "quantity":1,
+                "itemAmount":125000,
+                "isSoldOut": true,
+                "soldOutImage": "https://png.pngtree.com/png-clipart/20241101/original/pngtree-sold-out-sticker-template-png-image_16577542.png",
+                "floatingImages": {
+                    "topLeft": "",
+                    "topRight": "",
+                    "bottomLeft": "",
+                    "bottomRight": "",
+                    "centerCenter": ""
+                },
+                "thumbnail": "/thumb/01.png"
+            }
+        ]
+    }
+]

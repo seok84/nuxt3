@@ -1,0 +1,154 @@
+@use "~/assets/scss/module";
+@use '~/assets/scss/common';
+@use '~/assets/scss/pages/items/item_list';
+
+#header .btn-back {
+    display: none;
+}
+
+.main-title-wrap {
+    margin: 0 0 3rem;
+    text-align: center;
+
+    .main-title {
+        @extend %flexCenter, %flexVCenter;
+        font-family: module.$pointFont;
+        font-size: 4.6rem;
+        font-weight: bold;
+        letter-spacing: -.161rem;
+        line-height: 1;
+        color: #000;
+        margin: 0 0 1.8rem;
+
+        &:after {
+            @extend %ico;
+            content: '';
+            display: module.$inlineBlock;
+            width: 4.8rem;
+            height: 4.8rem;
+            background-image: url('~/assets/image/ico/btn_more.svg');
+        }
+    }
+
+    h2.main-title::after {
+        display: none;
+    }
+
+    p {
+        line-height: 1.44;
+        font-size: 1.8rem;
+        letter-spacing: -0.161rem;
+        color: module.$brandPrimary;
+    }
+}
+
+.user-action {
+    display: module.$flex;
+    width: module.$full;
+    justify-content: flex-end;
+    margin: 0 0 .4rem;
+}
+
+.user-ico {
+    @extend %textHidden;
+    display: module.$inlineBlock;
+    width: 3.6rem;
+    height: 3.6rem;
+    background-repeat: no-repeat;
+    background-size: 2.2rem auto;
+    background-position: center;
+    cursor: pointer;
+}
+
+.user-attention {
+    background-image: url('~/assets/image/item/ico_heart_white.svg');
+}
+
+.user-basket {
+    background-image: url('~/assets/image/item/ico_basket_white.svg');
+}
+
+.main {
+    .btn-more {
+        display: none;
+    }
+}
+
+@include module.mobile {
+    .searching-area input[type=search] {
+        display: none;
+    }
+
+    .main-title-wrap {
+        margin: 0 0 2rem;
+
+        .main-title {
+            font-size: 2.4rem;
+            margin: 0 0 .6rem;
+
+            &:after {
+                width: 1.8rem;
+                height: 1.8rem;
+                margin: 0 0 0 .667rem;
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    .main {
+        .btn-area {
+            text-align: center;
+        }
+
+        .btn-more {
+            display: module.$inlineFlex;
+            align-items: center;
+            justify-content: center;
+            width: 19rem;
+            height: 4.8rem;
+            border-radius: 4.8rem;
+            border: .1rem solid module.$brandPrimary;
+            font-size: 1.6rem;
+            color: module.$brandPrimary;
+            margin: auto;
+
+            &:after {
+                content: '';
+                display: module.$inlineBlock;
+                width: 2rem;
+                height: 2rem;
+                background-image: url('~/assets/image/ico/ico_down_primary.svg');
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    
+    #popup-area {        
+        .modal {
+            position: fixed !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -30%);
+            width: calc(100% - 3.2rem) !important;
+            max-height: calc(60vh +  6rem);
+            &-body {
+                max-height: 60vh;
+            }
+        }
+    }
+
+    .item-list-container {
+        .item-list:nth-of-type(n+5) {
+            display: none;
+        }
+
+        &.on .item-list:nth-of-type(n+5) {
+            display: block;
+        }
+    }
+}
